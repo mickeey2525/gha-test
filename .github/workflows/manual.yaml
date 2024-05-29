@@ -7,9 +7,14 @@ on:
         default: Hello
         required: true
         description: A cheerful word
+      name:
+        type: string
+        default: World
+        required: true
+        description: A name to greet
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ inputs.greeting }}, World"
+      - run: echo "${{ inputs.greeting }}, ${{ inputs.name }}!"
