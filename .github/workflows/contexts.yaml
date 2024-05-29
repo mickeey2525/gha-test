@@ -4,4 +4,4 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The event name is ${{ github.event_name }}"
+      - run: echo "The event name is ${{ github.event_name }} and test"
