@@ -30,6 +30,10 @@ jobs:
           echo "- first line" >> "${GITHUB_STEP_SUMMARY}"
           echo "- second line" >> "${GITHUB_STEP_SUMMARY}"
 
+  # josのデータ出力
+  # 1. ステップにidキーを設定
+  # 2. ステップ内でGITHUB_OUTPU環境変数へ値を書き出す
+  # 3. 出力値をジョブのoutputsキーへstepsコンテキスト経由でセット
   share-data-between-jobs-before:
     runs-on: ubuntu-latest
     steps:
