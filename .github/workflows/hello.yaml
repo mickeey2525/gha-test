@@ -6,4 +6,12 @@ jobs:
     steps:
       - run: echo "Hello, World"
       - uses: actions/checkout@v4
-      - run: echo "${{ github.workflow }}"
+    
+  
+  show_workflow_name:
+    runs-on: ubuntu-latest
+    env:
+      WORKFLOW_NAME: ${{ github.workflow }}
+      RUN_NUMBER: ${{ github.run_number }}
+    steps:
+      - run: echo "WorkflowName => ${WORKFLOW_NAME}"\n "RunNumber => ${RUN_NUMBER}"
