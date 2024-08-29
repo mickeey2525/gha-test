@@ -20,5 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "::error::This is an error"
-      - run: echo "::warn::This is warning"
+      - run: echo "::warning::This is warning"
       - run: echo "::notice::This is notice"
+  job-suumary:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "## Example Title :rocket:" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- first line" >> "${GITHUB_STEP_SUMMARY}
+          echo "- second line" >> "${GITHUB_STEP_SUMMARY}"
