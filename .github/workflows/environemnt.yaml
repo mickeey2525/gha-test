@@ -1,4 +1,4 @@
-name: environment use case\
+name: environment use case
 on:
   workflow_dispatch:
     inputs:
