@@ -1,4 +1,4 @@
-name: Hello
+name: Github Actions Sample
 on: push
 jobs:
   hello:
@@ -15,3 +15,10 @@ jobs:
       RUN_NUMBER: ${{ github.run_number }}
     steps:
       - run: echo "WorkflowName => ${WORKFLOW_NAME}"\n "RunNumber => ${RUN_NUMBER}"
+
+  log-annotation:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::error::This is an error"
+      - run: echo "::warn::This is warning"
+      - run: echo "::notice::This is notice"
